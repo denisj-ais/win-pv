@@ -74,7 +74,6 @@
         <File Id='XenbusCat' Source='$(var.DIR_XENBUS)xenbus.cat' />
         <File Id='XenSys' Source='$(var.DIR_XENBUS)xen.sys' />
         <File Id='XenfiltSys' Source='$(var.DIR_XENBUS)xenfilt.sys' />
-        <File Id='XenbusCoinst' Source='$(var.DIR_XENBUS)xenbus_coinst.dll' />
         <File Id='XenbusMonitorDll' Source='$(var.DIR_XENBUS)xenbus_monitor.dll' />
         <File Id='XenbusMonitorExe' Source='$(var.DIR_XENBUS)xenbus_monitor.exe' />
         <difx:Driver AddRemovePrograms='no' PlugAndPlayPrompt='no' />
@@ -83,7 +82,6 @@
         <File Id='XenconsSys' Source='$(var.DIR_XENCONS)xencons.sys' KeyPath='yes' />
         <File Id='XenconsInf' Source='$(var.DIR_XENCONS)xencons.inf' />
         <File Id='XenconsCat' Source='$(var.DIR_XENCONS)xencons.cat' />
-        <File Id='XenconsCoinst' Source='$(var.DIR_XENCONS)xencons_coinst.dll' />
         <File Id='XenconsMonitorDll' Source='$(var.DIR_XENCONS)xencons_monitor.dll' />
         <File Id='XenconsMonitorExe' Source='$(var.DIR_XENCONS)xencons_monitor.exe' />
         <File Id='XenconsTtyExe' Source='$(var.DIR_XENCONS)xencons_tty.exe' />
@@ -93,7 +91,6 @@
         <File Id='XenifaceSys' Source='$(var.DIR_XENIFACE)xeniface.sys' KeyPath='yes' />
         <File Id='XenifaceInf' Source='$(var.DIR_XENIFACE)xeniface.inf' />
         <File Id='XenifaceCat' Source='$(var.DIR_XENIFACE)xeniface.cat' />
-        <File Id='XenifaceCoinst' Source='$(var.DIR_XENIFACE)xeniface_coinst.dll' />
         <File Id='XenagentDll' Source='$(var.DIR_XENIFACE)xenagent.dll' />
         <File Id='XenagentExe' Source='$(var.DIR_XENIFACE)xenagent.exe' />
         <difx:Driver AddRemovePrograms='no' PlugAndPlayPrompt='no' />
@@ -102,28 +99,24 @@
         <File Id='XenhidSys' Source='$(var.DIR_XENHID)xenhid.sys' KeyPath='yes' />
         <File Id='XenhidInf' Source='$(var.DIR_XENHID)xenhid.inf' />
         <File Id='XenhidCat' Source='$(var.DIR_XENHID)xenhid.cat' />
-        <File Id='XenhidCoinst' Source='$(var.DIR_XENHID)xenhid_coinst.dll' />
         <difx:Driver AddRemovePrograms='no' PlugAndPlayPrompt='no' />
       </Component>
       <Component Id='Xenvkbd' Guid='B3C80249-E80F-4CA4-A293-8E858B45288C' Directory='Xenvkbd'>
         <File Id='XenvkbdSys' Source='$(var.DIR_XENVKBD)xenvkbd.sys' KeyPath='yes' />
         <File Id='XenvkbdInf' Source='$(var.DIR_XENVKBD)xenvkbd.inf' />
         <File Id='XenvkbdCat' Source='$(var.DIR_XENVKBD)xenvkbd.cat' />
-        <File Id='XenvkbdCoinst' Source='$(var.DIR_XENVKBD)xenvkbd_coinst.dll' />
         <difx:Driver AddRemovePrograms='no' PlugAndPlayPrompt='no' />
       </Component>
       <Component Id='Xenvif' Guid='AA02F568-3DC4-43B6-83BC-75832CA4E4F0' Directory='Xenvif'>
         <File Id='XenvifSys' Source='$(var.DIR_XENVIF)xenvif.sys' KeyPath='yes' />
         <File Id='XenvifInf' Source='$(var.DIR_XENVIF)xenvif.inf' />
         <File Id='XenvifCat' Source='$(var.DIR_XENVIF)xenvif.cat' />
-        <File Id='XenvifCoinst' Source='$(var.DIR_XENVIF)xenvif_coinst.dll' />
         <difx:Driver AddRemovePrograms='no' PlugAndPlayPrompt='no' />
       </Component>
       <Component Id='Xennet' Guid='3E83BF0A-9405-4523-B418-605D33EC0345' Directory='Xennet'>
         <File Id='XennetSys' Source='$(var.DIR_XENNET)xennet.sys' KeyPath='yes' />
         <File Id='XennetInf' Source='$(var.DIR_XENNET)xennet.inf' />
         <File Id='XennetCat' Source='$(var.DIR_XENNET)xennet.cat' />
-        <File Id='XennetCoinst' Source='$(var.DIR_XENNET)xennet_coinst.dll' />
         <difx:Driver AddRemovePrograms='no' PlugAndPlayPrompt='no' />
       </Component>
       <Component Id='Xenvbd' Guid='30D77968-F9A7-4466-8436-2A3020F007F3' Directory='Xenvbd'>
@@ -132,7 +125,6 @@
         <File Id='XenvbdCat' Source='$(var.DIR_XENVBD)xenvbd.cat' />
         <File Id='XencrshSys' Source='$(var.DIR_XENVBD)xencrsh.sys' />
         <File Id='XendiskSys' Source='$(var.DIR_XENVBD)xendisk.sys' />
-        <File Id='XenvbdCoinst' Source='$(var.DIR_XENVBD)xenvbd_coinst.dll' />
         <difx:Driver AddRemovePrograms='no' PlugAndPlayPrompt='no' />
       </Component>
     </ComponentGroup>
@@ -141,14 +133,12 @@
         <File Id='XenvusbSys' Source='$(var.DIR_XENVUSB)xenvusb.sys' KeyPath='yes' />
         <File Id='XenvusbInf' Source='$(var.DIR_XENVUSB)xenvusb.inf' />
         <File Id='XenvusbCat' Source='$(var.DIR_XENVUSB)xenvusb.cat' />
-        <File Id='XenvusbCoinst' Source='$(var.DIR_XENVUSB)xenvusb_coinst.dll' />
         <difx:Driver AddRemovePrograms='no' PlugAndPlayPrompt='no' />
       </Component>
       <Component Id='Xenusbdevice' Guid='3D2B8FE3-A2C4-4D78-B0D1-35D5DFFEBE9A' Directory='Xenusbdevice'>
         <File Id='XenusbdeviceSys' Source='$(var.DIR_XENUSBDEVICE)xenusbdevice.sys' KeyPath='yes' />
         <File Id='XenusbdeviceInf' Source='$(var.DIR_XENUSBDEVICE)xenusbdevice.inf' />
         <File Id='XenusbdeviceCat' Source='$(var.DIR_XENUSBDEVICE)xenusbdevice.cat' />
-        <File Id='XenusbdeviceCoinst' Source='$(var.DIR_XENUSBDEVICE)xenusbdevice_coinst.dll' />
         <difx:Driver AddRemovePrograms='no' PlugAndPlayPrompt='no' />
       </Component>
     </ComponentGroup>

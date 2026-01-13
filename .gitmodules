@@ -1,7 +1,3 @@
-[submodule "xenbus"]
-	path = xenbus
-	url = https://github.com/OpenXT/xenbus.git
-	branch = openxt-staging-9.0
 [submodule "xenvusb"]
 	path = xenvusb
 	url = https://github.com/OpenXT/xenvusb.git
@@ -12,16 +8,20 @@
 	branch = master
 [submodule "ivc"]
 	path = ivc
-	url = https://gitlab.com/ericch/ivc.git
-	branch = troy-winbuild
+	url = https://gitlab.com/vglass/ivc.git
+	branch = master
 [submodule "pv-display-helper"]
 	path = pv-display-helper
-	url = https://gitlab.com/ericch/pv-display-helper.git
-	branch = troy-winbuild
+	url = https://gitlab.com/vglass/pv-display-helper.git
+	branch = master
 [submodule "glasswddm"]
 	path = glasswddm
-	url = https://gitlab.com/ericch/glasswddm.git
-	branch = 9.0.0-unify
+	url = https://gitlab.com/vglass/glasswddm.git
+	branch = master
+[submodule "xenbus"]
+	path = xenbus
+	url = https://github.com/OpenXT/xenbus.git
+	branch = openxt-staging-9.0
 [submodule "xencons"]
 	path = xencons
 	url = https://github.com/OpenXT/xencons.git
