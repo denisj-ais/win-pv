@@ -1,0 +1,48 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+name: Build with EWDK (Cached)
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Cache EWDK ISO
+        id: cache-ewdk
+        uses: actions/cache@v4
+        with:
+          path: ewdk.iso
+          key: ewdk-10-0-26100 # Change if EWDK version changes
+
+      - name: Download EWDK if not cached
+        if: steps.cache-ewdk.outputs.cache-hit != 'true'
+        run: |
+          $ewdkUrl = "https://go.microsoft.com/fwlink/?linkid=2335681" # EWDK link
+          Invoke-WebRequest -Uri $ewdkUrl -OutFile ewdk.iso
+
+      - name: Mount EWDK ISO
+        run: |
+          $mountResult = Mount-DiskImage -ImagePath .\ewdk.iso -PassThru
+          $driveLetter = ($mountResult | Get-Volume).DriveLetter
+          echo "EWDK_DRIVE=$driveLetter" | Out-File -FilePath $env:GITHUB_ENV -Append
+
+      - name: Build with EWDK
+        run: |
+          & "${env:EWDK_DRIVE}:\LaunchBuildEnv.cmd" amd64
+          buildall checked
+
+      - name: Unmount EWDK ISO
+        if: always()
+        run: |
+          Dismount-DiskImage -ImagePath .\ewdk.iso
